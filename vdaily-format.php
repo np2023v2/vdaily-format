@@ -74,10 +74,10 @@ class VDaily_Format {
             '5.65.2'
         );
         
-        // Enqueue CodeMirror theme
+        // Enqueue CodeMirror theme - Dracula
         wp_enqueue_style(
             'codemirror-theme',
-            'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css',
             array('codemirror'),
             '5.65.2'
         );
@@ -169,7 +169,7 @@ class VDaily_Format {
         
         wp_enqueue_style(
             'codemirror-theme',
-            'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css',
             array('codemirror'),
             '5.65.2'
         );

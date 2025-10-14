@@ -48,6 +48,16 @@
                 $pre.before('<span class="code-block-language">' + language + '</span>');
             }
             
+            // Add copy button
+            var $copyButton = $('<button class="code-copy-button" title="Copy code">Copy</button>');
+            $pre.before($copyButton);
+            
+            // Copy button click handler
+            $copyButton.on('click', function(e) {
+                e.preventDefault();
+                copyToClipboard(codeContent, $(this));
+            });
+            
             // Replace the pre/code with a textarea for CodeMirror
             var $textarea = $('<textarea></textarea>');
             $textarea.val(codeContent);
@@ -56,7 +66,7 @@
             // Initialize CodeMirror
             var editor = CodeMirror.fromTextArea($textarea[0], {
                 mode: getModeForLanguage(language),
-                theme: 'monokai',
+                theme: 'dracula',
                 lineNumbers: true,
                 readOnly: true,
                 lineWrapping: true,
@@ -133,6 +143,51 @@
         };
         
         return modeMap[language] || 'text/plain';
+    }
+    
+    /**
+     * Copy text to clipboard
+     */
+    function copyToClipboard(text, $button) {
+        // Use modern Clipboard API if available
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function() {
+                showCopySuccess($button);
+            }).catch(function(err) {
+                // Fallback method
+                fallbackCopyToClipboard(text, $button);
+            });
+        } else {
+            // Fallback method for older browsers
+            fallbackCopyToClipboard(text, $button);
+        }
+    }
+    
+    /**
+     * Fallback copy method for older browsers
+     */
+    function fallbackCopyToClipboard(text, $button) {
+        var $temp = $('<textarea>');
+        $('body').append($temp);
+        $temp.val(text).select();
+        try {
+            document.execCommand('copy');
+            showCopySuccess($button);
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+        $temp.remove();
+    }
+    
+    /**
+     * Show copy success feedback
+     */
+    function showCopySuccess($button) {
+        var originalText = $button.text();
+        $button.text('Copied!').addClass('copied');
+        setTimeout(function() {
+            $button.text(originalText).removeClass('copied');
+        }, 2000);
     }
     
     /**

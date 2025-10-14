@@ -39,12 +39,17 @@
             // Detect language from class name (e.g., language-javascript)
             var language = detectLanguage($code);
             
+            // If no language detected, default to plain text
+            if (!language) {
+                language = 'text';
+            }
+            
             // Create a wrapper for the code block
             var $wrapper = $('<div class="code-block-wrapper"></div>');
             $pre.wrap($wrapper);
             
-            // Add language indicator if language is detected
-            if (language) {
+            // Add language indicator if language is not plain text
+            if (language && language !== 'text') {
                 $pre.before('<span class="code-block-language">' + language + '</span>');
             }
             
@@ -102,7 +107,7 @@
      * Get CodeMirror mode for a given language
      */
     function getModeForLanguage(language) {
-        if (!language) {
+        if (!language || language === 'text') {
             return 'text/plain';
         }
         

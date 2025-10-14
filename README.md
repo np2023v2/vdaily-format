@@ -62,12 +62,14 @@ The plugin supports syntax highlighting for:
 The plugin applies modern styling to:
 
 - Headings with bottom borders
-- Clean paragraph spacing
+- Optimized spacing (reduced margins and padding)
 - Styled links with hover effects
 - Beautiful blockquotes
 - Responsive images with shadow
 - Modern tables
-- Code blocks with Monokai theme
+- Code blocks with Dracula theme
+- Copy button on code blocks
+- Priority mode to prevent style overrides
 - Lists and other content elements
 
 ## CodeMirror Integration
@@ -75,10 +77,11 @@ The plugin applies modern styling to:
 The plugin uses CodeMirror 5.65.2 for code syntax highlighting with:
 
 - Line numbers
-- Monokai theme
+- Dracula theme
 - Read-only mode (for display)
 - Line wrapping
 - Language detection from class names
+- Copy code functionality
 
 ## Customization
 

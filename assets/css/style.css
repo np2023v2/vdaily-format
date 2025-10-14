@@ -3,236 +3,269 @@
  * Version: 1.0.0
  */
 
-/* Modern content container */
+/* Modern content container - Optimized with reduced padding */
 .vdaily-format-content {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    color: #333 !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
 }
 
-/* Headings */
+/* Headings - Reduced margins */
 .vdaily-format-content h1,
 .vdaily-format-content h2,
 .vdaily-format-content h3,
 .vdaily-format-content h4,
 .vdaily-format-content h5,
 .vdaily-format-content h6 {
-    font-weight: 600;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    line-height: 1.3;
-    color: #1a1a1a;
+    font-weight: 600 !important;
+    margin-top: 1.2em !important;
+    margin-bottom: 0.6em !important;
+    line-height: 1.3 !important;
+    color: #1a1a1a !important;
 }
 
 .vdaily-format-content h1 {
-    font-size: 2.5em;
-    border-bottom: 3px solid #0073aa;
-    padding-bottom: 0.3em;
+    font-size: 2.5em !important;
+    border-bottom: 3px solid #0073aa !important;
+    padding-bottom: 0.2em !important;
 }
 
 .vdaily-format-content h2 {
-    font-size: 2em;
-    border-bottom: 2px solid #0073aa;
-    padding-bottom: 0.3em;
+    font-size: 2em !important;
+    border-bottom: 2px solid #0073aa !important;
+    padding-bottom: 0.2em !important;
 }
 
 .vdaily-format-content h3 {
-    font-size: 1.75em;
+    font-size: 1.75em !important;
 }
 
 .vdaily-format-content h4 {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
 }
 
-/* Paragraphs */
+/* Paragraphs - Reduced margin */
 .vdaily-format-content p {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.8em !important;
 }
 
 /* Links */
 .vdaily-format-content a {
-    color: #0073aa;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
+    color: #0073aa !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
 }
 
 .vdaily-format-content a:hover {
-    color: #005177;
-    border-bottom-color: #005177;
+    color: #005177 !important;
+    border-bottom-color: #005177 !important;
 }
 
-/* Lists */
+/* Lists - Reduced margins and padding */
 .vdaily-format-content ul,
 .vdaily-format-content ol {
-    margin-bottom: 1.5em;
-    padding-left: 2em;
+    margin-bottom: 0.8em !important;
+    padding-left: 1.5em !important;
 }
 
 .vdaily-format-content li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em !important;
 }
 
-/* Blockquotes */
+/* Blockquotes - Reduced margins and padding */
 .vdaily-format-content blockquote {
-    border-left: 4px solid #0073aa;
-    padding-left: 1.5em;
-    margin: 1.5em 0;
-    font-style: italic;
-    color: #666;
-    background: #f5f5f5;
-    padding: 1em 1.5em;
-    border-radius: 4px;
+    border-left: 4px solid #0073aa !important;
+    padding-left: 1em !important;
+    margin: 0.8em 0 !important;
+    font-style: italic !important;
+    color: #666 !important;
+    background: #f5f5f5 !important;
+    padding: 0.8em 1em !important;
+    border-radius: 4px !important;
 }
 
-/* Images */
+/* Images - Reduced margin */
 .vdaily-format-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 1.5em 0;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    margin: 0.8em 0 !important;
 }
 
-/* Code blocks - Modern styling */
+/* Code blocks - Dracula theme with reduced margins and padding */
 .vdaily-format-content pre {
-    background: #272822;
-    border-radius: 8px;
-    padding: 1.5em;
-    overflow-x: auto;
-    margin: 1.5em 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    background: #282a36 !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    overflow-x: auto !important;
+    margin: 0.8em 0 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    position: relative !important;
 }
 
 .vdaily-format-content pre code {
-    background: transparent;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    color: #f8f8f2;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    display: block;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #f8f8f2 !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    display: block !important;
 }
 
 /* Inline code */
 .vdaily-format-content code {
-    background: #f4f4f4;
-    padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
-    font-size: 0.9em;
-    color: #e83e8c;
-    border: 1px solid #e1e1e1;
+    background: #f4f4f4 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
+    font-size: 0.9em !important;
+    color: #e83e8c !important;
+    border: 1px solid #e1e1e1 !important;
 }
 
 /* CodeMirror styling adjustments */
 .vdaily-format-content .CodeMirror {
-    height: auto;
-    border-radius: 8px;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto !important;
+    border-radius: 8px !important;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 .vdaily-format-content .CodeMirror-scroll {
-    min-height: 100px;
+    min-height: 100px !important;
 }
 
-/* Code block language indicator */
+/* Code block wrapper - Reduced margin */
 .vdaily-format-content .code-block-wrapper {
-    position: relative;
-    margin: 1.5em 0;
+    position: relative !important;
+    margin: 0.8em 0 !important;
 }
 
 .vdaily-format-content .code-block-language {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #f8f8f2;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 10;
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #f8f8f2 !important;
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    z-index: 10 !important;
 }
 
-/* Tables */
+/* Tables - Reduced margin */
 .vdaily-format-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5em 0;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 0.8em 0 !important;
+    background: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
 }
 
 .vdaily-format-content th,
 .vdaily-format-content td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #e1e1e1;
+    padding: 12px 15px !important;
+    text-align: left !important;
+    border-bottom: 1px solid #e1e1e1 !important;
 }
 
 .vdaily-format-content th {
-    background: #0073aa;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
+    background: #0073aa !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.9em !important;
+    letter-spacing: 0.5px !important;
 }
 
 .vdaily-format-content tr:last-child td {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .vdaily-format-content tr:hover {
-    background: #f9f9f9;
+    background: #f9f9f9 !important;
 }
 
 /* Horizontal rule */
 .vdaily-format-content hr {
-    border: none;
-    border-top: 2px solid #e1e1e1;
-    margin: 2em 0;
+    border: none !important;
+    border-top: 2px solid #e1e1e1 !important;
+    margin: 2em 0 !important;
+}
+
+/* Copy button for code blocks */
+.vdaily-format-content .code-copy-button {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    background: #44475a !important;
+    color: #f8f8f2 !important;
+    border: 1px solid #6272a4 !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    z-index: 10 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.vdaily-format-content .code-copy-button:hover {
+    background: #6272a4 !important;
+    color: #fff !important;
+}
+
+.vdaily-format-content .code-copy-button:active {
+    background: #50fa7b !important;
+    color: #282a36 !important;
+}
+
+.vdaily-format-content .code-copy-button.copied {
+    background: #50fa7b !important;
+    color: #282a36 !important;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .vdaily-format-content {
-        font-size: 16px;
-        padding: 15px;
+        font-size: 16px !important;
+        padding: 8px !important;
     }
     
     .vdaily-format-content h1 {
-        font-size: 2em;
+        font-size: 2em !important;
     }
     
     .vdaily-format-content h2 {
-        font-size: 1.75em;
+        font-size: 1.75em !important;
     }
     
     .vdaily-format-content h3 {
-        font-size: 1.5em;
+        font-size: 1.5em !important;
     }
     
     .vdaily-format-content pre {
-        padding: 1em;
+        padding: 0.8em !important;
     }
     
     .vdaily-format-content .CodeMirror {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 }

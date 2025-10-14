@@ -73,9 +73,9 @@ Use <code>inline code</code> for single line snippets
 #### Change CodeMirror Theme
 Edit `vdaily-format.php`, find:
 ```php
-wp_enqueue_style('codemirror-theme', ...theme/monokai.min.css...);
+wp_enqueue_style('codemirror-theme', ...theme/dracula.min.css...);
 ```
-Replace `monokai` with: `dracula`, `material`, `solarized`, etc.
+Replace `dracula` with: `monokai`, `material`, `solarized`, etc.
 
 #### Modify Styles
 Edit `assets/css/style.css` to customize colors, fonts, spacing.
@@ -87,12 +87,14 @@ Edit `assets/js/script.js`, update the `getModeForLanguage()` function.
 
 ✓ Modern typography for all text
 ✓ Styled headings with borders
-✓ Clean paragraph spacing
+✓ Optimized spacing (reduced margins and padding)
 ✓ Hover effects on links
 ✓ Beautiful blockquotes
 ✓ Responsive images with shadows
 ✓ Professional tables
-✓ Syntax-highlighted code blocks
+✓ Syntax-highlighted code blocks with Dracula theme
+✓ Copy button on code blocks
+✓ Priority mode (styles use !important to prevent overrides)
 ✓ Mobile-responsive design
 
 ### Files Modified by Plugin

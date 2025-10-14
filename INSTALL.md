@@ -102,7 +102,7 @@ The plugin automatically detects and highlights the following languages:
 Edit `vdaily-format.php` and change the theme in the enqueue functions:
 
 ```php
-// Change from 'monokai' to another theme
+// Change from 'dracula' to another theme (monokai, material, solarized, etc.)
 wp_enqueue_style(
     'codemirror-theme',
     'https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css',
@@ -111,7 +111,7 @@ wp_enqueue_style(
 );
 ```
 
-Available themes: monokai, dracula, material, solarized, etc.
+Available themes: dracula (default), monokai, material, solarized, etc.
 
 ### Customizing Styles
 

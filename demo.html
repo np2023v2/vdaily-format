@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VDaily Format Plugin - Demo</title>
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" integrity="sha512-6sALqOPMrNSc8wzQF3TKLtNg3CmSGrDcKl9K2OmLCgp8S3t7J7jTh4RLkqNP8qxg+xYJy7mvO9NuqHZ3+oDxFw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css" integrity="sha512-R6PH4vSzF2Yxjdvb2p2FA06yWul+U0PDDav4b/od/oXf9Iw37zl10plvwOXelrjV2Ai7Eo3vyHeyFUjhXdBCVQ==" crossorigin="anonymous">
+    
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="vdaily-format-content">
+        <h1>VDaily Format Plugin Demo</h1>
+        
+        <p>This is a demonstration of the VDaily Format WordPress plugin. It shows how posts are formatted with modern styling and code blocks with syntax highlighting using CodeMirror.</p>
+        
+        <h2>Features</h2>
+        
+        <ul>
+            <li>Modern, clean typography</li>
+            <li>Beautiful code blocks with syntax highlighting</li>
+            <li>Support for multiple programming languages</li>
+            <li>Responsive design</li>
+        </ul>
+        
+        <h2>Code Block Examples</h2>
+        
+        <h3>JavaScript</h3>
+        
+        <pre><code class="language-javascript">// JavaScript example
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+const message = greet('World');
+console.log(message);
+
+// ES6 arrow function
+const multiply = (a, b) => a * b;
+</code></pre>
+        
+        <h3>PHP</h3>
+        
+        <pre><code class="language-php">&lt;?php
+// PHP example
+class User {
+    private $name;
+    
+    public function __construct($name) {
+        $this->name = $name;
+    }
+    
+    public function greet() {
+        echo "Hello, " . $this->name . "!";
+    }
+}
+
+$user = new User("John");
+$user->greet();
+?&gt;
+</code></pre>
+        
+        <h3>Python</h3>
+        
+        <pre><code class="language-python"># Python example
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# List comprehension
+squares = [x**2 for x in range(10)]
+print(squares)
+</code></pre>
+        
+        <h3>CSS</h3>
+        
+        <pre><code class="language-css">/* CSS example */
+.button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+</code></pre>
+        
+        <h2>Inline Code</h2>
+        
+        <p>You can also use inline code like <code>const x = 10;</code> or <code>console.log()</code> within your paragraphs.</p>
+        
+        <h2>Blockquotes</h2>
+        
+        <blockquote>
+            "Code is like humor. When you have to explain it, it's bad." - Cory House
+        </blockquote>
+        
+        <h2>Links</h2>
+        
+        <p>Check out the <a href="https://github.com/np2023v2/vdaily-format">GitHub repository</a> for more information.</p>
+        
+        <h2>Tables</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Extension</th>
+                    <th>Supported</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>.js</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>.php</td>
+                    <td>✓</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>.py</td>
+                    <td>✓</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
+    
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js" integrity="sha512-xwrAU5yhWwdTvvmMNheFn9IyuDbl+XX+xB1consolR8+0qsS6LxLGQ8a5rmT+Svz3QvQ/z0qUU77U8vGdl9N0A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js" integrity="sha512-I6CdJdruzGtvDyvdO4YsiAq+pkWf2efgd1ZUSK2FnM/u2VuRASPC7GowWQrWyjxCZn6CT89s3ddGI+be0Ak9Fg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js" integrity="sha512-6lM5RuPZhbFl6gKyqOkYUbKqx9dU6WmrNO2AXLX7fJv4u8lrFuB7qZ7YrBwZ7wPw3vR5CbKqKYMV1+4tLqXWDg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js" integrity="sha512-3uQXKvbZZXtEBxP0ydFQYQlC8qCqzXRMqSQQM6sXUNlKP3EqKqkBPe7CUMkYXJH4w1r8tWQkKqxqVzTH0lJHjg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/php/php.min.js" integrity="sha512-jZFMh/5qHfNIGmB/28RvLLqXwqRG3NAJHkWLgSLFoHAKd3KMnWz4RtDOdZLhWmhYQCqpH3q5mqM1wvpLGqVEg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js" integrity="sha512-/mavDpedrvPG/0Grj2Ughxte/fsm42ZmZWWpHz1jCbzd5ECv8CB7PomGtw0NAnhHmE/lkDFkRMupjoohbKNA1Q==" crossorigin="anonymous"></script>
+    
+    <!-- Plugin JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

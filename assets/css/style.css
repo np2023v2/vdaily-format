@@ -134,16 +134,16 @@
 /* CodeMirror styling adjustments */
 .vdaily-format-content .CodeMirror {
     height: auto !important;
-    border-radius: 8px !important;
+    border-radius: 0 0 8px 8px !important; /* Only round bottom corners since wrapper has top rounded */
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
     font-size: 14px !important;
     line-height: 1.5 !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    background: #282a36 !important; /* Match the wrapper background */
 }
 
-/* Add spacing at top of CodeMirror to prevent button overlap */
+/* Remove extra padding from CodeMirror lines since wrapper has padding */
 .vdaily-format-content .CodeMirror-lines {
-    padding-top: 32px !important;
+    padding: 4px 0 !important;
 }
 
 .vdaily-format-content .CodeMirror-scroll {
@@ -154,6 +154,10 @@
 .vdaily-format-content .code-block-wrapper {
     position: relative !important;
     margin: 0.8em 0 !important;
+    background: #282a36 !important;
+    border-radius: 8px !important;
+    padding-top: 36px !important; /* Space for header with buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 .vdaily-format-content .code-block-language {

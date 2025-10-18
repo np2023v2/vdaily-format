@@ -7,19 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **BREAKING**: Removed CodeMirror integration and replaced with GitHub-style code blocks
+- Simplified code block display without line numbers sidebar
+- Updated to GitHub dark theme styling (#0d1117 background)
+- Cleaner, more minimal code block presentation
+- Copy button and language indicator now positioned in dedicated header area
+- Removed all CodeMirror dependencies from frontend and admin
+
 ### Fixed
 - Fixed code block button overlap issues where Copy button and language indicator overlapped each other
-- Fixed layout issues where buttons overlapped with code content and line numbers
-- Improved CodeMirror line number styling with muted colors for better visual hierarchy
-- Enhanced code block wrapper with dedicated header space (36px) for buttons
-- Smart button positioning: Copy button on left when language indicator present, on right otherwise
-- Fixed code block border-radius and background consistency
-- Added subtle border between line number gutter and code content
-
-### Changed
-- Moved background and box-shadow from CodeMirror element to wrapper for better visual consistency
-- Updated button positioning logic with `.has-language` class for context-aware styling
-- Improved CodeMirror integration with wrapper for seamless appearance
+- Fixed layout issues where buttons overlapped with code content
+- Removed intrusive line numbers that appeared in corner
+- Simplified code block structure for better performance
 
 ## [1.0.0] - 2025-10-14
 

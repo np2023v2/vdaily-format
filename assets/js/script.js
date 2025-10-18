@@ -1,5 +1,5 @@
 /**
- * VDaily Format - CodeMirror Integration
+ * VDaily Format - GitHub-Style Code Blocks
  * Version: 1.0.0
  */
 
@@ -7,29 +7,23 @@
     'use strict';
     
     /**
-     * Initialize CodeMirror on page load
+     * Initialize code blocks on page load
      */
     $(document).ready(function() {
-        initializeCodeMirror();
+        initializeCodeBlocks();
     });
     
     /**
-     * Initialize CodeMirror for all code blocks
+     * Initialize GitHub-style code blocks
      */
-    function initializeCodeMirror() {
-        // Check if CodeMirror is available
-        if (typeof CodeMirror === 'undefined') {
-            console.warn('CodeMirror is not loaded');
-            return;
-        }
-        
+    function initializeCodeBlocks() {
         // Find all code blocks within the formatted content
         $('.vdaily-format-content pre code').each(function() {
             var $code = $(this);
             var $pre = $code.parent('pre');
             
             // Skip if already initialized
-            if ($pre.hasClass('codemirror-initialized')) {
+            if ($pre.hasClass('vdaily-code-initialized')) {
                 return;
             }
             
@@ -66,23 +60,8 @@
                 copyToClipboard(codeContent, $(this));
             });
             
-            // Replace the pre/code with a textarea for CodeMirror
-            var $textarea = $('<textarea></textarea>');
-            $textarea.val(codeContent);
-            $pre.replaceWith($textarea);
-            
-            // Initialize CodeMirror
-            var editor = CodeMirror.fromTextArea($textarea[0], {
-                mode: getModeForLanguage(language),
-                theme: 'dracula',
-                lineNumbers: true,
-                readOnly: true,
-                lineWrapping: true,
-                viewportMargin: Infinity
-            });
-            
             // Mark as initialized
-            $(editor.getWrapperElement()).addClass('codemirror-initialized');
+            $pre.addClass('vdaily-code-initialized');
         });
     }
     
@@ -104,53 +83,6 @@
         }
         
         return null;
-    }
-    
-    /**
-     * Get CodeMirror mode for a given language
-     */
-    function getModeForLanguage(language) {
-        if (!language || language === 'text') {
-            return 'text/plain';
-        }
-        
-        var modeMap = {
-            'javascript': 'javascript',
-            'js': 'javascript',
-            'typescript': 'javascript',
-            'ts': 'javascript',
-            'jsx': 'jsx',
-            'tsx': 'jsx',
-            'css': 'css',
-            'scss': 'css',
-            'sass': 'css',
-            'less': 'css',
-            'html': 'htmlmixed',
-            'xml': 'xml',
-            'php': 'php',
-            'python': 'python',
-            'py': 'python',
-            'ruby': 'ruby',
-            'rb': 'ruby',
-            'java': 'text/x-java',
-            'c': 'text/x-csrc',
-            'cpp': 'text/x-c++src',
-            'csharp': 'text/x-csharp',
-            'cs': 'text/x-csharp',
-            'go': 'go',
-            'rust': 'rust',
-            'sql': 'sql',
-            'json': 'application/json',
-            'markdown': 'markdown',
-            'md': 'markdown',
-            'bash': 'shell',
-            'sh': 'shell',
-            'shell': 'shell',
-            'yaml': 'yaml',
-            'yml': 'yaml'
-        };
-        
-        return modeMap[language] || 'text/plain';
     }
     
     /**
@@ -197,16 +129,5 @@
             $button.text(originalText).removeClass('copied');
         }, 2000);
     }
-    
-    /**
-     * Refresh CodeMirror instances when needed
-     */
-    window.vdailyFormatRefresh = function() {
-        $('.CodeMirror').each(function() {
-            if (this.CodeMirror) {
-                this.CodeMirror.refresh();
-            }
-        });
-    };
     
 })(jQuery);

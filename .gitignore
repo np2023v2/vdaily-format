@@ -28,3 +28,4 @@ package-lock.json
 *.backup
 *~
 test-local.html
+test-structure.html

@@ -49,8 +49,11 @@
             $pre.wrap($wrapper);
             
             // Add language indicator if language is not plain text
-            if (language && language !== 'text') {
+            var hasLanguage = language && language !== 'text';
+            if (hasLanguage) {
                 $pre.before('<span class="code-block-language">' + language + '</span>');
+                // Add class to wrapper when language indicator is present
+                $pre.parent('.code-block-wrapper').addClass('has-language');
             }
             
             // Add copy button

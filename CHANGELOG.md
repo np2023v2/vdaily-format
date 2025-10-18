@@ -5,6 +5,22 @@ All notable changes to the VDaily Format WordPress plugin will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+- Fixed code block button overlap issues where Copy button and language indicator overlapped each other
+- Fixed layout issues where buttons overlapped with code content and line numbers
+- Improved CodeMirror line number styling with muted colors for better visual hierarchy
+- Enhanced code block wrapper with dedicated header space (36px) for buttons
+- Smart button positioning: Copy button on left when language indicator present, on right otherwise
+- Fixed code block border-radius and background consistency
+- Added subtle border between line number gutter and code content
+
+### Changed
+- Moved background and box-shadow from CodeMirror element to wrapper for better visual consistency
+- Updated button positioning logic with `.has-language` class for context-aware styling
+- Improved CodeMirror integration with wrapper for seamless appearance
+
 ## [1.0.0] - 2025-10-14
 
 ### Added

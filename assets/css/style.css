@@ -141,6 +141,17 @@
     background: #282a36 !important; /* Match the wrapper background */
 }
 
+/* Style the line numbers gutter */
+.vdaily-format-content .CodeMirror-linenumber {
+    color: #6272a4 !important; /* Muted color for line numbers */
+    padding: 0 8px !important;
+}
+
+.vdaily-format-content .CodeMirror-gutters {
+    background: #282a36 !important; /* Match the wrapper background */
+    border-right: 1px solid #44475a !important;
+}
+
 /* Remove extra padding from CodeMirror lines since wrapper has padding */
 .vdaily-format-content .CodeMirror-lines {
     padding: 4px 0 !important;

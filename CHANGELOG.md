@@ -5,6 +5,22 @@ All notable changes to the VDaily Format WordPress plugin will be documented in 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- **BREAKING**: Removed CodeMirror integration and replaced with GitHub-style code blocks
+- Simplified code block display without line numbers sidebar
+- Updated to GitHub dark theme styling (#0d1117 background)
+- Cleaner, more minimal code block presentation
+- Copy button and language indicator now positioned in dedicated header area
+- Removed all CodeMirror dependencies from frontend and admin
+
+### Fixed
+- Fixed code block button overlap issues where Copy button and language indicator overlapped each other
+- Fixed layout issues where buttons overlapped with code content
+- Removed intrusive line numbers that appeared in corner
+- Simplified code block structure for better performance
+
 ## [1.0.0] - 2025-10-14
 
 ### Added

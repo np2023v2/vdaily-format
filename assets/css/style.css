@@ -98,26 +98,30 @@
     margin: 0.8em 0 !important;
 }
 
-/* Code blocks - Dracula theme with reduced margins and padding */
+/* Code blocks - GitHub style with dark theme */
 .vdaily-format-content pre {
-    background: #282a36 !important;
-    border-radius: 8px !important;
-    padding: 1em !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
     overflow-x: auto !important;
-    margin: 0.8em 0 !important;
+    margin: 0 !important;
     position: relative !important;
+    border: none !important;
 }
 
 .vdaily-format-content pre code {
     background: transparent !important;
-    padding: 0 !important;
+    padding: 16px !important;
     border: none !important;
     border-radius: 0 !important;
     color: #f8f8f2 !important;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
     font-size: 14px !important;
-    line-height: 1.5 !important;
+    line-height: 1.6 !important;
     display: block !important;
+    white-space: pre !important;
+    word-wrap: normal !important;
+    overflow-x: auto !important;
 }
 
 /* Inline code */
@@ -131,39 +135,39 @@
     border: 1px solid #e1e1e1 !important;
 }
 
-/* CodeMirror styling adjustments */
-.vdaily-format-content .CodeMirror {
-    height: auto !important;
-    border-radius: 8px !important;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-}
-
-.vdaily-format-content .CodeMirror-scroll {
-    min-height: 100px !important;
-}
-
-/* Code block wrapper - Reduced margin */
+/* Code block wrapper - GitHub style */
 .vdaily-format-content .code-block-wrapper {
     position: relative !important;
     margin: 0.8em 0 !important;
+    background: #0d1117 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+}
+
+/* Header area for buttons */
+.vdaily-format-content .code-block-wrapper::before {
+    content: '' !important;
+    display: block !important;
+    height: 40px !important;
+    background: #161b22 !important;
+    border-bottom: 1px solid #30363d !important;
 }
 
 .vdaily-format-content .code-block-language {
     position: absolute !important;
-    top: 8px !important;
-    right: 8px !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: #f8f8f2 !important;
-    padding: 4px 12px !important;
-    border-radius: 4px !important;
+    top: 10px !important;
+    right: 80px !important;
+    background: transparent !important;
+    color: #7d8590 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
     font-size: 12px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     z-index: 10 !important;
+    line-height: 20px !important;
 }
 
 /* Tables - Reduced margin */
@@ -208,37 +212,37 @@
     margin: 2em 0 !important;
 }
 
-/* Copy button for code blocks */
+/* Copy button for code blocks - GitHub style */
 .vdaily-format-content .code-copy-button {
     position: absolute !important;
     top: 8px !important;
     right: 8px !important;
-    background: #44475a !important;
-    color: #f8f8f2 !important;
-    border: 1px solid #6272a4 !important;
-    padding: 6px 12px !important;
-    border-radius: 4px !important;
+    background: #21262d !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #30363d !important;
+    padding: 5px 12px !important;
+    border-radius: 6px !important;
     font-size: 12px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     cursor: pointer !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.2s ease !important;
     z-index: 10 !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 .vdaily-format-content .code-copy-button:hover {
-    background: #6272a4 !important;
-    color: #fff !important;
+    background: #30363d !important;
+    border-color: #8b949e !important;
 }
 
 .vdaily-format-content .code-copy-button:active {
-    background: #50fa7b !important;
-    color: #282a36 !important;
+    background: #161b22 !important;
 }
 
 .vdaily-format-content .code-copy-button.copied {
-    background: #50fa7b !important;
-    color: #282a36 !important;
+    background: #238636 !important;
+    border-color: #238636 !important;
+    color: #ffffff !important;
 }
 
 /* Responsive design */

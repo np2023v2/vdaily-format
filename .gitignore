@@ -27,4 +27,6 @@ package-lock.json
 *.bak
 *.backup
 *~
-test-local.html
+
+# Test files
+test-*.html
